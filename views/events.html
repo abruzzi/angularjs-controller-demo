@@ -2,4 +2,8 @@
 	<li>{{event}}</li>
 </ul>
 
-<button ng-click="dynamic()">Dynamic</button>
+<!-- <button ng-click="dynamic()">Dynamic</button> -->
+
+<span ng-click="toggleContactsPanel()">Click to show contacts</span>
+<div ng-include="'views/contacts.html'" ng-show="showContacts">
+</div>

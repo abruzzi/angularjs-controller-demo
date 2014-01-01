@@ -7,3 +7,4 @@ app.config(['$routeProvider',
 			controller: 'EventController'
 		}).otherwise('/');
 	}]);
+

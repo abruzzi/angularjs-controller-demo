@@ -5,8 +5,11 @@ app.factory('ContactService', ['$http', '$q',
 		return {
 			getContacts: function() {
 				var deferred = $q.defer();
-
-				$http.get('/contacts.json').success(function(result) {
+                
+                var param = {
+                    type: "contacts"
+                };
+				$http.post('/action.do', param).success(function(result) {
 					deferred.resolve(result);
 				}).error(function(result) {
 					deferred.reject(result);

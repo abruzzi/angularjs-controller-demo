@@ -6,7 +6,10 @@ app.factory('EventService', ['$http', '$q',
 			getEvents: function() {
 				var deferred = $q.defer();
 
-				$http.get('/events.json').success(function(result) {
+                var param = {
+                    type: "events"
+                };
+				$http.post('/action.do', param).success(function(result) {
 					deferred.resolve(result);
 				}).error(function(result) {
 					deferred.reject(result);

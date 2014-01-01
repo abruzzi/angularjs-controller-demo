@@ -5,4 +5,8 @@ app.controller('ContactController', ['$scope', 'ContactService', '$compile',
 		ContactService.getContacts().then(function(contacts) {
 			$scope.contacts = contacts;
 		});
+
+        $scope.submit = function() {
+            $scope.$parent.toggleContactsPanel();
+        };
 	}]);

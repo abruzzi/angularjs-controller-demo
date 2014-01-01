@@ -1,0 +1,34 @@
+[
+    {
+        "mount": {
+            "dir": "./",
+            "uri": "/"
+        }
+    },
+    {
+        "request": {
+            "method": "post",
+            "uri": "/action.do",
+            "json_paths": {
+                "$.type": "events" 
+            }
+        },
+        "response": {
+            "status": 200,
+            "file": "spec/fixtures/events.json"
+        }
+    },
+    {
+        "request": {
+            "method": "post",
+            "uri": "/action.do",
+            "json_paths": {
+                "$.type": "contacts"    
+            }
+        },
+        "response": {
+            "status": 200,
+            "file": "spec/fixtures/contacts.json"
+        }
+    }
+]
